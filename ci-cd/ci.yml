@@ -1,0 +1,25 @@
+# Continuous Integration for Dancin' Pie (GitHub Actions).
+#
+# NOT ACTIVE YET: GitHub blocks pushing files under .github/workflows/ unless the
+# OAuth token has the `workflow` scope. To activate this pipeline:
+#
+#   gh auth refresh -s workflow
+#   git mv ci-cd/ci.yml .github/workflows/ci.yml
+#   git commit -m "ci: enable HTML lint" && git push
+#
+# Deployment itself does NOT need this — GitHub Pages auto-deploys from `main`.
+
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  htmlhint:
+    name: Lint HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HTMLHint
+        run: npx --yes htmlhint "**/*.html"

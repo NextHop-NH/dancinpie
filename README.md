@@ -31,6 +31,24 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 Or just double-click `index.html`.
 
+## Deploy & CI/CD
+
+**Hosting:** GitHub Pages, served from `main` (deploy-from-branch). Every push to
+`main` automatically rebuilds and redeploys — that's the continuous deployment.
+`.nojekyll` tells Pages to serve the files as-is (no Jekyll processing).
+
+Live site → **https://nexthop-nh.github.io/dancinpie/**
+
+**CI (optional, ready to enable):** [`ci-cd/ci.yml`](ci-cd/ci.yml) lints HTML on
+every push/PR via GitHub Actions. It isn't active yet because pushing workflow
+files needs the `workflow` OAuth scope. Turn it on with:
+
+```bash
+gh auth refresh -s workflow
+git mv ci-cd/ci.yml .github/workflows/ci.yml
+git commit -m "ci: enable HTML lint" && git push
+```
+
 ## Structure
 
 ```
