@@ -19,6 +19,8 @@ Sticky nav → split hero (mascot on a dashed-ring "plate" + floating pepperoni)
   Pizza names stay in English as brand/product names.
 - **Filter tabs** — All / Detroit Square / Tavern Thin / Plant-Based
 - **Solo ↔ Sharable** price toggle with a sliding knob (swaps every card's price)
+- **Currency** — prices are stored in USD (`data-solo` / `data-share`); the MK
+  site auto-converts to **denari (ден)** at the rate in `script.js` (`MKD_PER_USD`)
 - Mobile hamburger menu
 
 ## Stack
@@ -54,14 +56,15 @@ dancinpie/
 - **Menu** — each pizza is an `<article class="pz">` in `index.html`. Edit the
   name, description, ingredients, badges, and the `data-solo` / `data-share`
   prices (the toggle reads those numbers).
-- **Add real photos** — each card has a branded placeholder `<div class="pz-ph">`.
-  Replace it with `<img class="pz-photo" src="assets/…" alt="…">` and it fills
-  the slot (object-fit: cover).
+- **Menu photos** — live in `assets/menu/` as `pz1.webp`…`pz9.webp`, shown via
+  `<img class="pz-photo">` (transparent, `object-fit: contain` on the card's
+  cream). Drop in your own images with the same filenames to swap them.
 - **Locations / hours** — in the `#locations` section of `index.html`.
 - **Colors** — CSS variables at the top of `styles.css` (`:root`). `--accent`
   drives the primary buttons and the toggle knob.
-- **Links** — nav/footer/social links and "Order Pickup" are `#` placeholders;
-  point them at your real ordering platform and social profiles.
+- **Ordering** — the **Order Now / Order Pickup** buttons open the venue's
+  Google Maps listing (`maps.app.goo.gl/…` in `index.html`). Nav/footer/social
+  links are still `#` placeholders — point them at your real profiles.
 
 ### Layout variants (from the original design's "Tweaks" panel)
 
@@ -77,6 +80,10 @@ the matching CSS is included, so you can flip the look without writing CSS:
 
 - Menu copy, prices, addresses and hours are tasteful **placeholders** — swap in
   the real details before launch.
+- ⚠️ **Photo credit / copyright** — the menu photos in `assets/menu/` are
+  **MotoPizza's** product images, pulled in as placeholders to populate the
+  layout. Replace them with your own or properly licensed photography before any
+  real/public use.
 - Implemented faithfully from the design; the design tool's drag-to-drop photo
   slots and live "Tweaks" editor panel were intentionally left out (they're
   authoring tools, not part of the shipped site).

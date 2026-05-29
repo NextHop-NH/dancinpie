@@ -91,6 +91,14 @@
   var currentSize = "share"; // matches the default-active toggle button
   var t = function (key) { return (I18N[lang] && I18N[lang][key] != null) ? I18N[lang][key] : (I18N.en[key] != null ? I18N.en[key] : key); };
 
+  // Prices are stored in USD (data-solo / data-share). On the MK site we show
+  // denari, converted at this rate and rounded to the nearest 10. Edit to taste.
+  var MKD_PER_USD = 58;
+  function formatPrice(usd) {
+    if (lang === 'mk') return (Math.round(usd * MKD_PER_USD / 10) * 10) + ' ден';
+    return '$' + usd;
+  }
+
   var cards = Array.prototype.slice.call(document.querySelectorAll('#menuGrid .pz'));
   var st = document.getElementById('sizeToggle');
   var knob = st && st.querySelector('.knob');
@@ -108,7 +116,7 @@
     cards.forEach(function (c) {
       var amt = c.querySelector('.amt'), lbl = c.querySelector('.lbl');
       if (!amt || !lbl) return;
-      amt.textContent = '$' + c.dataset[size];
+      amt.textContent = formatPrice(Number(c.dataset[size]));
       lbl.textContent = size === 'solo' ? t('size.solo') : t('size.share');
     });
   }
