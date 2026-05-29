@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DancinPie — Wood-Fired Pizza That Moves</title>
+  <meta name="description" content="DancinPie — hand-stretched, wood-fired pizza made to make your taste buds dance. Fresh dough daily, bold toppings, good times." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">🍕</span>
+      <span class="brand-name">DancinPie</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#order" class="btn btn-pill">Order Now</a>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <p class="eyebrow reveal">Wood-fired · Hand-stretched · Daily fresh</p>
+    <h1 class="hero-title">
+      <span class="reveal" style="--d:.05s">Pizza that</span>
+      <span class="reveal accent" style="--d:.15s">makes you</span>
+      <span class="reveal" style="--d:.25s">dance.</span>
+    </h1>
+    <p class="hero-sub reveal" style="--d:.4s">
+      Slow-proofed dough, San Marzano sauce, and toppings with attitude —
+      baked in 90 seconds at 480°C. One bite and your feet start moving.
+    </p>
+    <div class="hero-cta reveal" style="--d:.55s">
+      <a href="#order" class="btn btn-solid">Order a pie</a>
+      <a href="#menu" class="btn btn-ghost">See the menu →</a>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>FRESH DOUGH DAILY</span><span>•</span>
+        <span>480°C WOOD FIRE</span><span>•</span>
+        <span>NO SHORTCUTS</span><span>•</span>
+        <span>EXTRA CHEESE? ALWAYS</span><span>•</span>
+        <span>FRESH DOUGH DAILY</span><span>•</span>
+        <span>480°C WOOD FIRE</span><span>•</span>
+        <span>NO SHORTCUTS</span><span>•</span>
+        <span>EXTRA CHEESE? ALWAYS</span><span>•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu">
+    <div class="section-head">
+      <h2>The Line-up</h2>
+      <p>Twelve inches of joy. Every pie hand-stretched to order.</p>
+    </div>
+    <div class="menu-grid" id="menuGrid"><!-- injected by script.js --></div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="story">
+    <div class="story-text">
+      <h2>Born in the <em>oven</em>,<br />raised on the <em>dancefloor</em>.</h2>
+      <p>
+        DancinPie started with a stubborn idea: that a great slice should
+        make you close your eyes and sway a little. We proof our dough for
+        48 hours, source mozzarella from people we actually know, and we
+        never, ever rush the fire.
+      </p>
+      <p>
+        No frozen anything. No corner-cutting. Just real pizza, made with
+        the kind of care that turns a meal into a memory.
+      </p>
+      <div class="stats">
+        <div><strong>48h</strong><span>dough proof</span></div>
+        <div><strong>90s</strong><span>bake time</span></div>
+        <div><strong>100%</strong><span>good vibes</span></div>
+      </div>
+    </div>
+    <div class="story-card" aria-hidden="true">
+      <div class="pie">
+        <div class="pie-slice"></div>
+        <div class="pie-slice"></div>
+        <div class="pie-slice"></div>
+        <div class="pie-slice"></div>
+        <div class="pie-slice"></div>
+        <div class="pie-slice"></div>
+        <div class="pie-center">🍕</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT / ORDER -->
+  <section id="visit" class="visit">
+    <div class="section-head">
+      <h2>Come Dance With Us</h2>
+      <p>Dine in, take out, or we'll bring the party to you.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Hours</h3>
+        <ul class="hours">
+          <li><span>Mon — Thu</span><span>12:00 – 22:00</span></li>
+          <li><span>Fri — Sat</span><span>12:00 – 00:00</span></li>
+          <li><span>Sunday</span><span>14:00 – 22:00</span></li>
+        </ul>
+      </div>
+      <div class="visit-card">
+        <h3>Find Us</h3>
+        <p class="addr">Bulevar Ilinden 42<br />Skopje, North Macedonia</p>
+        <p class="addr"><a href="tel:+38970000000">+389 70 000 000</a></p>
+      </div>
+      <div id="order" class="visit-card visit-card--cta">
+        <h3>Hungry now?</h3>
+        <p>Order online and skip the line.</p>
+        <a href="#" class="btn btn-solid" onclick="return false;">Start your order</a>
+        <small>Demo button — wire this to your ordering platform.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark">🍕</span> DancinPie
+    </div>
+    <p>© <span id="year"></span> DancinPie. Made with extra cheese.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
