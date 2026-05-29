@@ -13,6 +13,10 @@ Sticky nav → split hero (mascot on a dashed-ring "plate" + floating pepperoni)
 **the menu** (9 pies) → two locations with hours → footer.
 
 ### Interactions
+- **Bilingual EN / MK** toggle in the nav — full Macedonian translation, remembered
+  in `localStorage` (defaults to browser language). All copy lives in the `I18N`
+  dictionary in `script.js`; markup carries `data-i18n` / `data-i18n-html` hooks.
+  Pizza names stay in English as brand/product names.
 - **Filter tabs** — All / Detroit Square / Tavern Thin / Plant-Based
 - **Solo ↔ Sharable** price toggle with a sliding knob (swaps every card's price)
 - Mobile hamburger menu
