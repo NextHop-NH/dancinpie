@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dancin' Pie — Detroit &amp; Tavern Style Pizza</title>
-  <meta name="description" content="Dancin' Pie — Detroit & Tavern style pizza made with 48-hour cold-proofed dough and cheese all the way to the corner. Thick crispy-edged squares and snappy tavern thins in Detroit, MI." />
+  <title data-i18n="meta.title">Dancin' Pie — Detroit &amp; Tavern Style Pizza</title>
+  <meta name="description" data-i18n="meta.desc" content="Dancin' Pie — Detroit & Tavern style pizza made with 48-hour cold-proofed dough and cheese all the way to the corner. Thick crispy-edged squares and snappy tavern thins in Detroit, MI." />
   <meta name="theme-color" content="#16314E" />
 
   <!-- Open Graph / social -->
@@ -32,10 +32,15 @@
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <div class="nav-links" id="navlinks">
-      <a href="#styles">Our Styles</a>
-      <a href="#menu">The Menu</a>
-      <a href="#locations">Locations</a>
-      <a class="btn btn-primary nav-cta" href="#menu">Order Now</a>
+      <a href="#styles" data-i18n="nav.styles">Our Styles</a>
+      <a href="#menu" data-i18n="nav.menu">The Menu</a>
+      <a href="#locations" data-i18n="nav.locations">Locations</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang="mk" aria-pressed="false">MK</button>
+      </div>
+      <a class="btn btn-primary nav-cta" href="#menu" data-i18n="nav.order">Order Now</a>
     </div>
   </nav>
 </header>
@@ -46,17 +51,17 @@
 <section class="hero dots">
   <div class="hero-inner wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Detroit &amp; Tavern Style</span>
-      <h1>Pizza that <span class="pop tilt">moves</span> ya.</h1>
-      <p class="hero-sub">Thick, crispy-edged Detroit squares and snappy tavern thins — fresh dough every morning, cheese all the way to the corner.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Detroit &amp; Tavern Style</span>
+      <h1 data-i18n-html="hero.h1">Pizza that <span class="pop tilt">moves</span> ya.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Thick, crispy-edged Detroit squares and snappy tavern thins — fresh dough every morning, cheese all the way to the corner.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#menu">See the Menu</a>
-        <a class="btn btn-ghost" href="#locations">Find a Spot</a>
+        <a class="btn btn-primary" href="#menu" data-i18n="hero.cta1">See the Menu</a>
+        <a class="btn btn-ghost" href="#locations" data-i18n="hero.cta2">Find a Spot</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>48hr</b><span>Cold-proofed dough</span></div>
-        <div class="stat"><b>2</b><span>Iconic styles</span></div>
-        <div class="stat"><b>8</b><span>Crispy corners</span></div>
+        <div class="stat"><b data-i18n="hero.stat1">48hr</b><span data-i18n="hero.stat1l">Cold-proofed dough</span></div>
+        <div class="stat"><b>2</b><span data-i18n="hero.stat2l">Iconic styles</span></div>
+        <div class="stat"><b>8</b><span data-i18n="hero.stat3l">Crispy corners</span></div>
       </div>
     </div>
     <div class="hero-art">
@@ -72,8 +77,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Fresh Dough Daily</span><span>Crispy Cheese Edges</span><span>Party-Cut Squares</span><span>Hot Honey On Request</span><span>Cold-Proofed 48 Hours</span>
-    <span>Fresh Dough Daily</span><span>Crispy Cheese Edges</span><span>Party-Cut Squares</span><span>Hot Honey On Request</span><span>Cold-Proofed 48 Hours</span>
+    <span data-i18n="mq.1">Fresh Dough Daily</span><span data-i18n="mq.2">Crispy Cheese Edges</span><span data-i18n="mq.3">Party-Cut Squares</span><span data-i18n="mq.4">Hot Honey On Request</span><span data-i18n="mq.5">Cold-Proofed 48 Hours</span>
+    <span data-i18n="mq.1">Fresh Dough Daily</span><span data-i18n="mq.2">Crispy Cheese Edges</span><span data-i18n="mq.3">Party-Cut Squares</span><span data-i18n="mq.4">Hot Honey On Request</span><span data-i18n="mq.5">Cold-Proofed 48 Hours</span>
   </div>
 </div>
 
@@ -81,24 +86,24 @@
 <section class="section styles" id="styles">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-kicker">Two ways to dance</div>
-      <h2>Square or thin. You can't lose.</h2>
-      <p>Every pie starts with our 48-hour cold-proofed dough. Then it goes one of two beautiful directions.</p>
+      <div class="sec-kicker" data-i18n="styles.kicker">Two ways to dance</div>
+      <h2 data-i18n="styles.h2">Square or thin. You can't lose.</h2>
+      <p data-i18n="styles.p">Every pie starts with our 48-hour cold-proofed dough. Then it goes one of two beautiful directions.</p>
     </div>
     <div class="style-grid">
       <article class="style-card">
-        <span class="tag-rot">The thick one</span>
+        <span class="tag-rot" data-i18n="sc1.tag">The thick one</span>
         <div class="style-ic"><span class="sq"></span></div>
-        <h3>Detroit Square</h3>
-        <p>Baked in a seasoned blue-steel pan so the cheese caramelizes against the wall into a lacy, crunchy frico edge. Airy, focaccia-soft middle. Sauce racing-striped over the top.</p>
-        <div class="meta"><span>Pan-baked</span><span>Crispy edges</span><span>8 corners</span></div>
+        <h3 data-i18n="sc1.h3">Detroit Square</h3>
+        <p data-i18n="sc1.p">Baked in a seasoned blue-steel pan so the cheese caramelizes against the wall into a lacy, crunchy frico edge. Airy, focaccia-soft middle. Sauce racing-striped over the top.</p>
+        <div class="meta"><span data-i18n="sc1.m1">Pan-baked</span><span data-i18n="sc1.m2">Crispy edges</span><span data-i18n="sc1.m3">8 corners</span></div>
       </article>
       <article class="style-card">
-        <span class="tag-rot">The crispy one</span>
+        <span class="tag-rot" data-i18n="sc2.tag">The crispy one</span>
         <div class="style-ic"><span class="rd"></span></div>
-        <h3>Tavern Thin</h3>
-        <p>Rolled cracker-thin, loaded edge to edge, then party-cut into little squares — the Midwest tavern way. Snappy, shareable, impossible to stop eating.</p>
-        <div class="meta"><span>Cracker-thin</span><span>Edge-to-edge</span><span>Party cut</span></div>
+        <h3 data-i18n="sc2.h3">Tavern Thin</h3>
+        <p data-i18n="sc2.p">Rolled cracker-thin, loaded edge to edge, then party-cut into little squares — the Midwest tavern way. Snappy, shareable, impossible to stop eating.</p>
+        <div class="meta"><span data-i18n="sc2.m1">Cracker-thin</span><span data-i18n="sc2.m2">Edge-to-edge</span><span data-i18n="sc2.m3">Party cut</span></div>
       </article>
     </div>
   </div>
@@ -108,22 +113,22 @@
 <section class="section menu" id="menu">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-kicker">The Menu</div>
-      <h2>Pick your pie</h2>
-      <p>Order <b>Solo</b> for a personal four-corner, or go <b>Sharable</b> for the full eight-corner pan. Toggle prices below.</p>
+      <div class="sec-kicker" data-i18n="menu.kicker">The Menu</div>
+      <h2 data-i18n="menu.h2">Pick your pie</h2>
+      <p data-i18n-html="menu.p">Order <b>Solo</b> for a personal four-corner, or go <b>Sharable</b> for the full eight-corner pan. Toggle prices below.</p>
     </div>
 
     <div class="menu-controls">
       <div class="tabs" id="tabs">
-        <button class="tab active" data-filter="all">All Pies</button>
-        <button class="tab" data-filter="detroit">Detroit Square</button>
-        <button class="tab" data-filter="tavern">Tavern Thin</button>
-        <button class="tab" data-filter="veg">Plant-Based</button>
+        <button class="tab active" data-filter="all" data-i18n="tab.all">All Pies</button>
+        <button class="tab" data-filter="detroit" data-i18n="tab.detroit">Detroit Square</button>
+        <button class="tab" data-filter="tavern" data-i18n="tab.tavern">Tavern Thin</button>
+        <button class="tab" data-filter="veg" data-i18n="tab.veg">Plant-Based</button>
       </div>
       <div class="size-toggle" id="sizeToggle">
         <span class="knob"></span>
-        <button data-size="solo">Solo</button>
-        <button data-size="share" class="active">Sharable</button>
+        <button data-size="solo" data-i18n="size.solo">Solo</button>
+        <button data-size="share" class="active" data-i18n="size.share">Sharable</button>
       </div>
     </div>
 
@@ -131,7 +136,7 @@
 
       <article class="pz" data-cat="detroit" data-solo="14" data-share="26">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge red">Fan Fave</span></div>
+          <div class="pz-badges"><span class="badge red" data-i18n="pz1.badge">Fan Fave</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of The OG Red Top"></div>
         </div>
         <div class="pz-body">
@@ -139,8 +144,8 @@
             <h3 class="pz-name">The OG Red Top</h3>
             <div class="pz-price"><span class="amt">$26</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Wisconsin brick cheese carried all the way to the crispy edge, a double stack of pepperoni, and three bold stripes of San Marzano sauce over the top.</p>
-          <div class="pz-ingredients">Brick cheese · double pepperoni · red-top sauce</div>
+          <p class="pz-desc" data-i18n="pz1.desc">Wisconsin brick cheese carried all the way to the crispy edge, a double stack of pepperoni, and three bold stripes of San Marzano sauce over the top.</p>
+          <div class="pz-ingredients" data-i18n="pz1.ing">Brick cheese · double pepperoni · red-top sauce</div>
         </div>
       </article>
 
@@ -153,14 +158,14 @@
             <h3 class="pz-name">Caramel Crust Cheese</h3>
             <div class="pz-price"><span class="amt">$22</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Just cheese, done right. Brick and low-moisture mozz baked into a lacquered frico wall, finished with a garlic-butter rim.</p>
-          <div class="pz-ingredients">Brick + mozzarella · frico edge · garlic butter</div>
+          <p class="pz-desc" data-i18n="pz2.desc">Just cheese, done right. Brick and low-moisture mozz baked into a lacquered frico wall, finished with a garlic-butter rim.</p>
+          <div class="pz-ingredients" data-i18n="pz2.ing">Brick + mozzarella · frico edge · garlic butter</div>
         </div>
       </article>
 
       <article class="pz" data-cat="detroit" data-solo="15" data-share="27">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge gold">Spicy</span></div>
+          <div class="pz-badges"><span class="badge gold" data-i18n="pz3.badge">Spicy</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of Hot Honey Pep"></div>
         </div>
         <div class="pz-body">
@@ -168,14 +173,14 @@
             <h3 class="pz-name">Hot Honey Pep</h3>
             <div class="pz-price"><span class="amt">$27</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Cup-and-char pepperoni that crisps into little grease cups, a lazy drizzle of hot honey, and a flick of calabrian chili. A little swagger.</p>
-          <div class="pz-ingredients">Cup pepperoni · hot honey · calabrian chili</div>
+          <p class="pz-desc" data-i18n="pz3.desc">Cup-and-char pepperoni that crisps into little grease cups, a lazy drizzle of hot honey, and a flick of calabrian chili. A little swagger.</p>
+          <div class="pz-ingredients" data-i18n="pz3.ing">Cup pepperoni · hot honey · calabrian chili</div>
         </div>
       </article>
 
       <article class="pz" data-cat="detroit" data-solo="16" data-share="29">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge">Loaded</span></div>
+          <div class="pz-badges"><span class="badge" data-i18n="pz4.badge">Loaded</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of The Dancin' Supreme"></div>
         </div>
         <div class="pz-body">
@@ -183,14 +188,14 @@
             <h3 class="pz-name">The Dancin' Supreme</h3>
             <div class="pz-price"><span class="amt">$29</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">The whole crew shows up: pepperoni, fennel sausage, bell peppers, red onion, cremini mushroom, and a scatter of black olive.</p>
-          <div class="pz-ingredients">Pepperoni · sausage · peppers · onion · mushroom</div>
+          <p class="pz-desc" data-i18n="pz4.desc">The whole crew shows up: pepperoni, fennel sausage, bell peppers, red onion, cremini mushroom, and a scatter of black olive.</p>
+          <div class="pz-ingredients" data-i18n="pz4.ing">Pepperoni · sausage · peppers · onion · mushroom</div>
         </div>
       </article>
 
       <article class="pz" data-cat="tavern" data-solo="13" data-share="23">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge">Party Cut</span></div>
+          <div class="pz-badges"><span class="badge" data-i18n="pz5.badge">Party Cut</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of the Tavern Classic"></div>
         </div>
         <div class="pz-body">
@@ -198,14 +203,14 @@
             <h3 class="pz-name">Tavern Classic</h3>
             <div class="pz-price"><span class="amt">$23</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Cracker-thin and edge-to-edge: fennel sausage and cremini mushroom over a snappy crust, party-cut into little squares.</p>
-          <div class="pz-ingredients">Thin crust · sausage · mushroom</div>
+          <p class="pz-desc" data-i18n="pz5.desc">Cracker-thin and edge-to-edge: fennel sausage and cremini mushroom over a snappy crust, party-cut into little squares.</p>
+          <div class="pz-ingredients" data-i18n="pz5.ing">Thin crust · sausage · mushroom</div>
         </div>
       </article>
 
       <article class="pz" data-cat="tavern" data-solo="14" data-share="25">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge gold">Spicy</span></div>
+          <div class="pz-badges"><span class="badge gold" data-i18n="pz6.badge">Spicy</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of Giardiniera Heat"></div>
         </div>
         <div class="pz-body">
@@ -213,8 +218,8 @@
             <h3 class="pz-name">Giardiniera Heat</h3>
             <div class="pz-price"><span class="amt">$25</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Chicago-style hot giardiniera and spicy soppressata over mozzarella on a snappy thin crust. Bright, crunchy, hot.</p>
-          <div class="pz-ingredients">Soppressata · hot giardiniera · mozzarella</div>
+          <p class="pz-desc" data-i18n="pz6.desc">Chicago-style hot giardiniera and spicy soppressata over mozzarella on a snappy thin crust. Bright, crunchy, hot.</p>
+          <div class="pz-ingredients" data-i18n="pz6.ing">Soppressata · hot giardiniera · mozzarella</div>
         </div>
       </article>
 
@@ -227,14 +232,14 @@
             <h3 class="pz-name">The White Knight</h3>
             <div class="pz-price"><span class="amt">$25</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Garlic cream base, dollops of whipped ricotta, mozzarella, then a tangle of lemon-dressed arugula tossed on after the bake.</p>
-          <div class="pz-ingredients">Garlic cream · ricotta · arugula</div>
+          <p class="pz-desc" data-i18n="pz7.desc">Garlic cream base, dollops of whipped ricotta, mozzarella, then a tangle of lemon-dressed arugula tossed on after the bake.</p>
+          <div class="pz-ingredients" data-i18n="pz7.ing">Garlic cream · ricotta · arugula</div>
         </div>
       </article>
 
       <article class="pz" data-cat="veg" data-solo="13" data-share="23">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge green">Veggie</span></div>
+          <div class="pz-badges"><span class="badge green" data-i18n="pz8.badge">Veggie</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of Margherita Moves"></div>
         </div>
         <div class="pz-body">
@@ -242,14 +247,14 @@
             <h3 class="pz-name">Margherita Moves</h3>
             <div class="pz-price"><span class="amt">$23</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Fresh mozzarella, San Marzano, torn basil and a swirl of good olive oil over a tavern-thin crust. Clean and classic.</p>
-          <div class="pz-ingredients">Fresh mozz · basil · San Marzano</div>
+          <p class="pz-desc" data-i18n="pz8.desc">Fresh mozzarella, San Marzano, torn basil and a swirl of good olive oil over a tavern-thin crust. Clean and classic.</p>
+          <div class="pz-ingredients" data-i18n="pz8.ing">Fresh mozz · basil · San Marzano</div>
         </div>
       </article>
 
       <article class="pz" data-cat="veg" data-solo="15" data-share="27">
         <div class="pz-img">
-          <div class="pz-badges"><span class="badge green">Vegan</span></div>
+          <div class="pz-badges"><span class="badge green" data-i18n="pz9.badge">Vegan</span></div>
           <div class="pz-ph" role="img" aria-label="Photo of Garden Groove"></div>
         </div>
         <div class="pz-body">
@@ -257,13 +262,13 @@
             <h3 class="pz-name">Garden Groove</h3>
             <div class="pz-price"><span class="amt">$27</span><small class="lbl">Sharable</small></div>
           </div>
-          <p class="pz-desc">Roasted squash, charred broccolini and red onion over vegan mozz on a Detroit square, finished with chili oil.</p>
-          <div class="pz-ingredients">Vegan mozz · roasted veg · chili oil</div>
+          <p class="pz-desc" data-i18n="pz9.desc">Roasted squash, charred broccolini and red onion over vegan mozz on a Detroit square, finished with chili oil.</p>
+          <div class="pz-ingredients" data-i18n="pz9.ing">Vegan mozz · roasted veg · chili oil</div>
         </div>
       </article>
 
     </div>
-    <p id="noPies" style="display:none;text-align:center;font-weight:600;color:var(--navy);padding:30px 0">No pies in that style yet — check back soon!</p>
+    <p id="noPies" data-i18n="menu.nopies" style="display:none;text-align:center;font-weight:600;color:var(--navy);padding:30px 0">No pies in that style yet — check back soon!</p>
   </div>
 </section>
 
@@ -272,30 +277,30 @@
   <img class="loc-watermark" src="assets/logo-white.png" alt="" aria-hidden="true" />
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-kicker">Come dance with us</div>
-      <h2>Find your pie</h2>
-      <p>Dine in, carry out, or order ahead. Slices fly — we recommend calling first on game nights.</p>
+      <div class="sec-kicker" data-i18n="loc.kicker">Come dance with us</div>
+      <h2 data-i18n="loc.h2">Find your pie</h2>
+      <p data-i18n="loc.p">Dine in, carry out, or order ahead. Slices fly — we recommend calling first on game nights.</p>
     </div>
     <div class="loc-grid">
       <article class="loc-card">
         <h3>Corktown</h3>
         <div class="addr">1847 Michigan Ave · Detroit, MI</div>
         <div class="loc-hours">
-          <div class="row"><span>Mon – Thu</span><span>11a – 10p</span></div>
-          <div class="row"><span>Fri – Sat</span><span>11a – 12a</span></div>
-          <div class="row"><span>Sunday</span><span class="open">Open till 9p</span></div>
+          <div class="row"><span data-i18n="loc.d1">Mon – Thu</span><span>11a – 10p</span></div>
+          <div class="row"><span data-i18n="loc.d2">Fri – Sat</span><span>11a – 12a</span></div>
+          <div class="row"><span data-i18n="loc.d3">Sunday</span><span class="open" data-i18n="loc.open">Open till 9p</span></div>
         </div>
-        <a class="btn btn-primary" href="#menu">Order Pickup</a>
+        <a class="btn btn-primary" href="#menu" data-i18n="loc.order">Order Pickup</a>
       </article>
       <article class="loc-card">
         <h3>Ferndale</h3>
         <div class="addr">312 W Nine Mile Rd · Ferndale, MI</div>
         <div class="loc-hours">
-          <div class="row"><span>Mon – Thu</span><span>12p – 10p</span></div>
-          <div class="row"><span>Fri – Sat</span><span>12p – 12a</span></div>
-          <div class="row"><span>Sunday</span><span class="open">Open till 9p</span></div>
+          <div class="row"><span data-i18n="loc.d1">Mon – Thu</span><span>12p – 10p</span></div>
+          <div class="row"><span data-i18n="loc.d2">Fri – Sat</span><span>12p – 12a</span></div>
+          <div class="row"><span data-i18n="loc.d3">Sunday</span><span class="open" data-i18n="loc.open">Open till 9p</span></div>
         </div>
-        <a class="btn btn-primary" href="#menu">Order Pickup</a>
+        <a class="btn btn-primary" href="#menu" data-i18n="loc.order">Order Pickup</a>
       </article>
     </div>
   </div>
@@ -309,7 +314,7 @@
     <div class="foot-grid">
       <div class="foot-logo">
         <img src="assets/logo-white.png" alt="Dancin' Pie" />
-        <p class="foot-blurb">Detroit &amp; Tavern style pizza, made with 48-hour dough and cheese all the way to the corner.</p>
+        <p class="foot-blurb" data-i18n="foot.blurb">Detroit &amp; Tavern style pizza, made with 48-hour dough and cheese all the way to the corner.</p>
         <div class="foot-social">
           <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H7v3h3v6h3v-6h2.5l.5-3H13v-2a1 1 0 0 1 1-1z"/></svg></a>
@@ -317,23 +322,23 @@
         </div>
       </div>
       <div class="foot-col">
-        <h4>Visit</h4>
+        <h4 data-i18n="foot.visit">Visit</h4>
         <a href="#locations">Corktown · Detroit</a>
         <a href="#locations">Ferndale</a>
-        <a href="#menu">Catering &amp; Parties</a>
-        <a href="#menu">Gift Cards</a>
+        <a href="#menu" data-i18n="foot.catering">Catering &amp; Parties</a>
+        <a href="#menu" data-i18n="foot.gift">Gift Cards</a>
       </div>
       <div class="foot-col">
-        <h4>Hungry?</h4>
-        <a href="#menu">Order Pickup</a>
-        <a href="#menu">See the Menu</a>
-        <a href="#styles">Our Styles</a>
-        <a href="#top">Back to Top</a>
+        <h4 data-i18n="foot.hungry">Hungry?</h4>
+        <a href="#menu" data-i18n="foot.l_order">Order Pickup</a>
+        <a href="#menu" data-i18n="foot.l_menu">See the Menu</a>
+        <a href="#styles" data-i18n="foot.l_styles">Our Styles</a>
+        <a href="#top" data-i18n="foot.l_top">Back to Top</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Dancin' Pie. All rights reserved.</span>
-      <span>Made fresh in Detroit, Michigan.</span>
+      <span data-i18n="foot.rights">© 2026 Dancin' Pie. All rights reserved.</span>
+      <span data-i18n="foot.made">Made fresh in Detroit, Michigan.</span>
     </div>
   </div>
 </footer>
