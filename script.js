@@ -1,119 +1,73 @@
-// ============================================
-//  DancinPie — interactivity
-// ============================================
-
-const MENU = [
-  {
-    emoji: "🍅",
-    name: "The Classic Margherita",
-    desc: "San Marzano, fior di latte, fresh basil, a thread of olive oil.",
-    price: "390 ден",
-    tag: "veg",
-    tagLabel: "Veggie",
-  },
-  {
-    emoji: "🌶️",
-    name: "Diavola Disco",
-    desc: "Spicy salami, chilli honey, mozzarella, oregano kick.",
-    price: "480 ден",
-    tag: "spicy",
-    tagLabel: "Spicy",
-  },
-  {
-    emoji: "🧀",
-    name: "Quattro Formaggi",
-    desc: "Mozzarella, gorgonzola, parmigiano, smoked scamorza.",
-    price: "520 ден",
-    tag: "veg",
-    tagLabel: "Veggie",
-  },
-  {
-    emoji: "🍄",
-    name: "Funghi Funk",
-    desc: "Roasted mushrooms, truffle cream, thyme, grana.",
-    price: "510 ден",
-    tag: "veg",
-    tagLabel: "Veggie",
-  },
-  {
-    emoji: "🥓",
-    name: "Carbonara Twist",
-    desc: "Guanciale, egg cream, pecorino, cracked black pepper.",
-    price: "540 ден",
-    tag: "house",
-    tagLabel: "House fave",
-  },
-  {
-    emoji: "🫒",
-    name: "Mediterraneo",
-    desc: "Cherry tomatoes, olives, capers, oregano, basil.",
-    price: "470 ден",
-    tag: "veg",
-    tagLabel: "Veggie",
-  },
-  {
-    emoji: "🌿",
-    name: "Pesto Groove",
-    desc: "Basil pesto, burrata, sun-dried tomato, pine nuts.",
-    price: "560 ден",
-    tag: "house",
-    tagLabel: "House fave",
-  },
-  {
-    emoji: "🍕",
-    name: "Pepperoni Party",
-    desc: "Double pepperoni, mozzarella, a little extra char.",
-    price: "490 ден",
-    tag: "house",
-    tagLabel: "House fave",
-  },
-];
-
-function renderMenu() {
-  const grid = document.getElementById("menuGrid");
-  if (!grid) return;
-  grid.innerHTML = MENU.map((p) => `
-    <article class="pizza-card">
-      <div class="emoji">${p.emoji}</div>
-      <h3>${p.name}</h3>
-      <p class="desc">${p.desc}</p>
-      <div class="row">
-        <span class="price">${p.price}</span>
-        <span class="tag tag--${p.tag}">${p.tagLabel}</span>
-      </div>
-    </article>
-  `).join("");
-}
-
-// Reveal cards on scroll
-function setupReveal() {
-  const cards = document.querySelectorAll(".pizza-card, .visit-card, .story-text, .story-card");
-  if (!("IntersectionObserver" in window)) {
-    cards.forEach((c) => (c.style.opacity = 1));
-    return;
+// ============================================================
+//  Dancin' Pie — vanilla interactions
+//  Mobile nav · menu filter tabs · Solo/Sharable price toggle
+// ============================================================
+(function () {
+  // ---- mobile nav ----
+  var nav = document.querySelector('.nav');
+  var burger = document.getElementById('burger');
+  var navlinks = document.getElementById('navlinks');
+  if (burger && nav) {
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('nav-open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    navlinks.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && window.innerWidth <= 980) {
+        nav.classList.remove('nav-open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          e.target.style.animation = `rise .6s cubic-bezier(.2,.7,.2,1) forwards`;
-          e.target.style.animationDelay = `${(i % 4) * 0.08}s`;
-          io.unobserve(e.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-  cards.forEach((c) => {
-    c.style.opacity = 0;
-    c.style.transform = "translateY(20px)";
-    io.observe(c);
-  });
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderMenu();
-  setupReveal();
-  const yr = document.getElementById("year");
-  if (yr) yr.textContent = new Date().getFullYear();
-});
+  // ---- menu filter tabs ----
+  var tabs = document.getElementById('tabs');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#menuGrid .pz'));
+  var noPies = document.getElementById('noPies');
+  if (tabs) {
+    tabs.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab');
+      if (!b) return;
+      tabs.querySelectorAll('.tab').forEach(function (t) { t.classList.toggle('active', t === b); });
+      var f = b.dataset.filter, shown = 0;
+      cards.forEach(function (c) {
+        var on = (f === 'all' || c.dataset.cat === f);
+        c.style.display = on ? '' : 'none';
+        if (on) shown++;
+      });
+      if (noPies) noPies.style.display = shown ? 'none' : 'block';
+    });
+  }
+
+  // ---- size toggle (Solo / Sharable) ----
+  var st = document.getElementById('sizeToggle');
+  if (st) {
+    var knob = st.querySelector('.knob');
+    var positionKnob = function () {
+      var act = st.querySelector('button.active');
+      if (!act) return;
+      knob.style.left = act.offsetLeft + 'px';
+      knob.style.width = act.offsetWidth + 'px';
+    };
+    var applySize = function (size) {
+      cards.forEach(function (c) {
+        var amt = c.querySelector('.amt'), lbl = c.querySelector('.lbl');
+        if (!amt || !lbl) return;
+        amt.textContent = '$' + c.dataset[size];
+        lbl.textContent = size === 'solo' ? 'Solo' : 'Sharable';
+      });
+    };
+    st.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      st.querySelectorAll('button').forEach(function (x) { x.classList.toggle('active', x === b); });
+      positionKnob();
+      applySize(b.dataset.size);
+    });
+    window.addEventListener('load', positionKnob);
+    window.addEventListener('resize', positionKnob);
+    // Re-align once webfonts settle (button widths shift after Bricolage loads)
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionKnob);
+    setTimeout(positionKnob, 60);
+  }
+})();
