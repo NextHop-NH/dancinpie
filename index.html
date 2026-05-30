@@ -24,9 +24,9 @@
       if(m!=='light'&&m!=='dark')m=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
       document.documentElement.setAttribute('data-mode',m);}catch(e){document.documentElement.setAttribute('data-mode','light');}})();
   </script>
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
-<body data-theme="cream" data-cards="photo" data-hero="split" data-texture="on">
+<body data-theme="cream" data-cards="photo" data-hero="split" data-texture="off">
 
 <!-- ============ NAV ============ -->
 <header class="nav">
@@ -71,9 +71,6 @@
       <div class="disc"></div>
       <img class="logo-light" src="assets/logo-navy.png" alt="Dancin' Pie mascot — a walking pizza slice in a cap and shades" />
       <img class="logo-dark" src="assets/logo-white.png" alt="" aria-hidden="true" />
-      <span class="pep" style="width:46px;height:46px;top:8%;left:6%"></span>
-      <span class="pep" style="width:30px;height:30px;bottom:14%;left:0%"></span>
-      <span class="pep" style="width:38px;height:38px;top:18%;right:2%"></span>
     </div>
   </div>
 </section>
@@ -84,23 +81,9 @@
     <div class="sec-head">
       <div class="sec-kicker" data-i18n="menu.kicker">The Menu</div>
       <h2 data-i18n="menu.h2">Pick your pie</h2>
-      <p data-i18n-html="menu.p">From a <b>Personal</b> (1 person) to a <b>Square</b> (1–2) to a full <b>Party</b> pan (6–8). Toggle prices below.</p>
+      <p data-i18n-html="menu.p">Detroit squares and tavern thins, fired fresh to order.</p>
     </div>
 
-    <div class="menu-controls">
-      <div class="tabs" id="tabs">
-        <button class="tab active" data-filter="all" data-i18n="tab.all">All Pies</button>
-        <button class="tab" data-filter="detroit" data-i18n="tab.detroit">Detroit Square</button>
-        <button class="tab" data-filter="tavern" data-i18n="tab.tavern">Tavern Thin</button>
-        <button class="tab" data-filter="veg" data-i18n="tab.veg">Plant-Based</button>
-      </div>
-      <div class="size-toggle" id="sizeToggle">
-        <span class="knob"></span>
-        <button data-size="personal" data-i18n="size.personal">Personal</button>
-        <button data-size="square" data-i18n="size.square">Square</button>
-        <button data-size="party" class="active" data-i18n="size.party">Party</button>
-      </div>
-    </div>
 
     <div class="menu-grid" id="menuGrid">
 
@@ -301,6 +284,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>
