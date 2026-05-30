@@ -24,7 +24,7 @@
       if(m!=='light'&&m!=='dark')m=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
       document.documentElement.setAttribute('data-mode',m);}catch(e){document.documentElement.setAttribute('data-mode','light');}})();
   </script>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body data-theme="cream" data-cards="photo" data-hero="split" data-texture="on">
 
@@ -32,7 +32,8 @@
 <header class="nav">
   <nav class="nav-inner wrap">
     <a class="nav-logo" href="#top">
-      <img src="assets/logo-red.png" alt="Dancin' Pie" />
+      <img class="logo-light" src="assets/logo-navy.png" alt="Dancin' Pie" />
+      <img class="logo-dark" src="assets/logo-white.png" alt="Dancin' Pie" />
     </a>
     <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -49,7 +50,7 @@
         <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" class="lang-btn" data-lang="mk" aria-pressed="false">MK</button>
       </div>
-      <a class="btn btn-primary nav-cta" href="https://maps.app.goo.gl/XsshvjfvmfJnqmPs7?g_st=ic" target="_blank" rel="noopener" data-i18n="nav.order">Order Now</a>
+      <a class="btn btn-wolt nav-cta" href="https://wolt.com/mk/mkd" target="_blank" rel="noopener" aria-label="Order on Wolt"><img class="wolt-logo" src="assets/wolt.svg" alt="Wolt" /></a>
     </div>
   </nav>
 </header>
@@ -69,7 +70,8 @@
     </div>
     <div class="hero-art">
       <div class="disc"></div>
-      <img src="assets/logo-red.png" alt="Dancin' Pie mascot — a walking pizza slice in a cap and shades" />
+      <img class="logo-light" src="assets/logo-navy.png" alt="Dancin' Pie mascot — a walking pizza slice in a cap and shades" />
+      <img class="logo-dark" src="assets/logo-white.png" alt="" aria-hidden="true" />
       <span class="pep" style="width:46px;height:46px;top:8%;left:6%"></span>
       <span class="pep" style="width:30px;height:30px;bottom:14%;left:0%"></span>
       <span class="pep" style="width:38px;height:38px;top:18%;right:2%"></span>
@@ -253,13 +255,13 @@
     <div class="loc-grid">
       <article class="loc-card">
         <h3 data-i18n="loc.name">Skopje</h3>
-        <div class="addr" data-i18n="loc.addr">Mariovska, Skopje 1000</div>
+        <a class="addr" href="https://maps.app.goo.gl/XsshvjfvmfJnqmPs7?g_st=ic" target="_blank" rel="noopener" data-i18n="loc.addr">Mariovska, Skopje 1000</a>
         <div class="loc-hours">
           <div class="row"><span data-i18n="loc.d1">Mon – Thu</span><span>11a – 10p</span></div>
           <div class="row"><span data-i18n="loc.d2">Fri – Sat</span><span>11a – 12a</span></div>
           <div class="row"><span data-i18n="loc.d3">Sunday</span><span class="open" data-i18n="loc.open">Open till 9p</span></div>
         </div>
-        <a class="btn btn-primary" href="https://maps.app.goo.gl/XsshvjfvmfJnqmPs7?g_st=ic" target="_blank" rel="noopener" data-i18n="loc.order">Order Pickup</a>
+        <a class="btn btn-primary" href="https://wolt.com/mk/mkd" target="_blank" rel="noopener" data-i18n="loc.order">Order Pickup</a>
       </article>
     </div>
   </div>
@@ -288,7 +290,7 @@
       </div>
       <div class="foot-col">
         <h4 data-i18n="foot.hungry">Hungry?</h4>
-        <a href="https://maps.app.goo.gl/XsshvjfvmfJnqmPs7?g_st=ic" target="_blank" rel="noopener" data-i18n="foot.l_order">Order Pickup</a>
+        <a href="https://wolt.com/mk/mkd" target="_blank" rel="noopener" data-i18n="foot.l_order">Order Pickup</a>
         <a href="#menu" data-i18n="foot.l_menu">See the Menu</a>
         <a href="#top" data-i18n="foot.l_top">Back to Top</a>
       </div>
@@ -300,6 +302,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
