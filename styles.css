@@ -10,8 +10,8 @@
   --red-deep:#9A1620;
   --navy:#16314E;
   --navy-deep:#0E2238;
-  --cream:#FCFBF9;
-  --cream-2:#F2F0EA;
+  --cream:#f6f6f6;
+  --cream-2:#ececec;
   --cream-card:#FFFFFF;
   --gold:#D99B2B;
   --ink:#16314E;
@@ -19,6 +19,7 @@
   /* tweakable */
   --accent:var(--red);
   --accent-ink:#fff;
+  --neon:255,46,62; /* neon red (rgb) for glow shadows */
   --radius:22px;
   --font-display:'Fredoka';
   --maxw:1240px;
@@ -60,9 +61,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
   padding:15px 26px;border-radius:999px;transition:transform .12s ease, box-shadow .12s ease, background .15s;
   letter-spacing:.01em;white-space:nowrap;
 }
-.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 10px 24px -10px color-mix(in srgb,var(--accent) 70%, transparent)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 32px -12px color-mix(in srgb,var(--accent) 72%, transparent)}
-.btn-primary:active{transform:translateY(0);box-shadow:0 8px 18px -10px color-mix(in srgb,var(--accent) 70%, transparent)}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 18px rgba(var(--neon),.45), 0 10px 24px -10px color-mix(in srgb,var(--accent) 70%, transparent)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(var(--neon),.6), 0 18px 32px -12px color-mix(in srgb,var(--accent) 72%, transparent)}
+.btn-primary:active{transform:translateY(0);box-shadow:0 0 16px rgba(var(--neon),.5), 0 8px 18px -10px color-mix(in srgb,var(--accent) 70%, transparent)}
 .btn-ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--navy) 30%, transparent)}
 .btn-ghost:hover{background:var(--navy);color:var(--cream)}
 
@@ -100,7 +101,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
   font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:var(--red);margin-bottom:18px}
 .eyebrow::before{content:"";width:30px;height:3px;border-radius:2px;background:var(--red)}
 .hero h1{font-size:clamp(3rem,7.2vw,6.1rem);color:var(--navy);font-weight:600}
-.hero h1 .pop{color:var(--red);display:inline-block}
+.hero h1 .pop{color:var(--red);display:inline-block;text-shadow:0 0 2px rgba(var(--neon),.5),0 0 16px rgba(var(--neon),.45),0 0 36px rgba(var(--neon),.3)}
 .hero h1 .tilt{display:inline-block;transform:rotate(-4deg)}
 .hero-sub{font-size:1.2rem;max-width:30ch;margin:24px 0 30px;color:color-mix(in srgb,var(--navy) 82%, #000);font-weight:500}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
@@ -129,11 +130,11 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
 .pep::after{content:"";position:absolute;inset:22%;border-radius:50%;background:rgba(0,0,0,.12)}
 
 /* ---------- marquee ---------- */
-.marquee{background:var(--navy);color:var(--cream);overflow:hidden;border-top:3px solid var(--red);border-bottom:3px solid var(--red)}
+.marquee{background:var(--navy);color:var(--cream);overflow:hidden;border-top:3px solid var(--red);border-bottom:3px solid var(--red);box-shadow:inset 0 0 28px rgba(var(--neon),.4), 0 0 20px rgba(var(--neon),.28)}
 .marquee-track{display:flex;gap:0;white-space:nowrap;animation:scroll 26s linear infinite;padding:13px 0}
 .marquee:hover .marquee-track{animation-play-state:paused}
-.marquee span{font-family:var(--font-display);font-weight:600;font-size:1.15rem;letter-spacing:.04em;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
-.marquee span::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--red)}
+.marquee span{font-family:var(--font-display);font-weight:600;font-size:1.15rem;letter-spacing:.04em;padding:0 26px;display:inline-flex;align-items:center;gap:26px;text-shadow:0 0 10px rgba(var(--neon),.5),0 0 22px rgba(var(--neon),.3)}
+.marquee span::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(var(--neon),.95),0 0 16px rgba(var(--neon),.6)}
 @keyframes scroll{to{transform:translateX(-50%)}}
 
 /* ---------- section heading ---------- */
@@ -239,9 +240,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
 .loc-hours{display:flex;flex-direction:column;gap:7px;font-size:.95rem}
 .loc-hours .row{display:flex;justify-content:space-between;border-bottom:1px dotted color-mix(in srgb,var(--cream) 25%,transparent);padding-bottom:7px}
 .loc-hours .row span:first-child{font-weight:600}
-.loc-hours .row .open{color:var(--gold);font-weight:700}
+.loc-hours .row .open{color:var(--gold);font-weight:700;text-shadow:0 0 12px rgba(217,155,43,.7)}
 .loc-card .btn{margin-top:22px}
-.loc-card .btn-primary{box-shadow:0 3px 0 rgba(0,0,0,.3)}
+.loc-card .btn-primary{box-shadow:0 0 20px rgba(var(--neon),.55), 0 10px 24px -10px rgba(0,0,0,.4)}
 
 /* ---------- footer ---------- */
 .footer{background:var(--navy-deep);color:var(--cream);padding:56px 0 30px}
