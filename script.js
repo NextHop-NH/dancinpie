@@ -168,6 +168,21 @@
     b.addEventListener('click', function () { applyLang(b.dataset.lang); });
   });
 
+  // ---------- theme toggle (light / dark) ----------
+  var themeBtn = document.getElementById('themeBtn');
+  if (themeBtn) {
+    var syncTheme = function () {
+      themeBtn.setAttribute('aria-pressed', String(document.documentElement.getAttribute('data-mode') === 'dark'));
+    };
+    syncTheme();
+    themeBtn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-mode', next);
+      try { localStorage.setItem('dp-mode', next); } catch (e) {}
+      syncTheme();
+    });
+  }
+
   // ---------- menu filter tabs ----------
   var tabs = document.getElementById('tabs');
   var noPies = document.getElementById('noPies');

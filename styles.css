@@ -93,6 +93,9 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
 .lang-btn:hover{color:var(--navy)}
 .lang-btn[aria-pressed="true"]{color:var(--red)}
 .lang-sep{opacity:.4}
+.theme-btn{display:inline-grid;place-items:center;width:38px;height:38px;padding:0;border:none;background:none;cursor:pointer;color:var(--navy);border-radius:10px}
+.theme-btn:hover{background:color-mix(in srgb,var(--navy) 10%,transparent)}
+.theme-btn .ic-sun{display:none}
 
 /* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;background:var(--cream)}
@@ -294,42 +297,44 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 
-/* ---------- dark theme (auto via prefers-color-scheme) ---------- */
-@media (prefers-color-scheme: dark){
-  :root{color-scheme:dark}
-  body{background:#0e1320;color:#e8edf5}
-  .hero,.styles{background:#0e1320}
-  .menu{background:#12182a}
+/* ---------- dark theme (toggled via [data-mode="dark"]; default set by inline script: saved choice → system) ---------- */
+html[data-mode="dark"]{color-scheme:dark}
+html[data-mode="dark"] body{background:#0e1320;color:#e8edf5}
+html[data-mode="dark"] .hero,html[data-mode="dark"] .styles{background:#0e1320}
+html[data-mode="dark"] .menu{background:#12182a}
 
-  /* nav */
-  .nav{background:color-mix(in srgb,#0e1320 88%,transparent);border-bottom-color:rgba(255,255,255,.10)}
-  .nav-links a{color:#e8edf5}
-  .nav-links a:hover{background:rgba(255,255,255,.08)}
-  .nav-burger{color:#e8edf5}
-  .lang-btn{color:rgba(232,237,245,.5)}
-  .lang-btn:hover{color:#e8edf5}
-  .nav.nav-open .nav-links{background:#161d2e;border-color:rgba(255,255,255,.16)}
+/* nav */
+html[data-mode="dark"] .nav{background:color-mix(in srgb,#0e1320 88%,transparent);border-bottom-color:rgba(255,255,255,.10)}
+html[data-mode="dark"] .nav-links a{color:#e8edf5}
+html[data-mode="dark"] .nav-links a:hover{background:rgba(255,255,255,.08)}
+html[data-mode="dark"] .nav-burger{color:#e8edf5}
+html[data-mode="dark"] .lang-btn{color:rgba(232,237,245,.5)}
+html[data-mode="dark"] .lang-btn:hover{color:#e8edf5}
+html[data-mode="dark"] .theme-btn{color:#e8edf5}
+html[data-mode="dark"] .theme-btn:hover{background:rgba(255,255,255,.08)}
+html[data-mode="dark"] .theme-btn .ic-sun{display:block}
+html[data-mode="dark"] .theme-btn .ic-moon{display:none}
+html[data-mode="dark"] .nav.nav-open .nav-links{background:#161d2e;border-color:rgba(255,255,255,.16)}
 
-  /* headings + copy → light */
-  .hero h1,.sec-head h2,.style-card h3,.pz-name{color:#f1f4f9}
-  .hero-sub,.sec-head p,.style-card p,.pz-desc{color:#c4ccd8}
-  .hero-stats .stat span,.pz-ingredients,.pz-price small{color:#9aa6b6}
+/* headings + copy → light */
+html[data-mode="dark"] .hero h1,html[data-mode="dark"] .sec-head h2,html[data-mode="dark"] .style-card h3,html[data-mode="dark"] .pz-name{color:#f1f4f9}
+html[data-mode="dark"] .hero-sub,html[data-mode="dark"] .sec-head p,html[data-mode="dark"] .style-card p,html[data-mode="dark"] .pz-desc{color:#c4ccd8}
+html[data-mode="dark"] .hero-stats .stat span,html[data-mode="dark"] .pz-ingredients,html[data-mode="dark"] .pz-price small{color:#9aa6b6}
 
-  /* cards / controls */
-  .pz,.style-card,.size-toggle{background:#171f30;border-color:rgba(255,255,255,.12)}
-  .pz-img{background:#141b2a}
-  .style-ic{background:#222c40}
-  .tab{color:#e8edf5;border-color:rgba(255,255,255,.18)}
-  .tab:hover{background:rgba(255,255,255,.08)}
-  .tab.active{background:#e8edf5;color:#0e1320}
-  .size-toggle button{color:#e8edf5}
-  .size-toggle button.active{color:#fff}
-  #noPies{color:#e8edf5}
+/* cards / controls */
+html[data-mode="dark"] .pz,html[data-mode="dark"] .style-card,html[data-mode="dark"] .size-toggle{background:#171f30;border-color:rgba(255,255,255,.12)}
+html[data-mode="dark"] .pz-img{background:#141b2a}
+html[data-mode="dark"] .style-ic{background:#222c40}
+html[data-mode="dark"] .tab{color:#e8edf5;border-color:rgba(255,255,255,.18)}
+html[data-mode="dark"] .tab:hover{background:rgba(255,255,255,.08)}
+html[data-mode="dark"] .tab.active{background:#e8edf5;color:#0e1320}
+html[data-mode="dark"] .size-toggle button{color:#e8edf5}
+html[data-mode="dark"] .size-toggle button.active{color:#fff}
+html[data-mode="dark"] #noPies{color:#e8edf5}
 
-  /* ghost button needs light ink on dark */
-  .btn-ghost{color:#e8edf5;box-shadow:inset 0 0 0 1.5px rgba(232,237,245,.35)}
-  .btn-ghost:hover{background:#e8edf5;color:#0e1320}
+/* ghost button needs light ink on dark */
+html[data-mode="dark"] .btn-ghost{color:#e8edf5;box-shadow:inset 0 0 0 1.5px rgba(232,237,245,.35)}
+html[data-mode="dark"] .btn-ghost:hover{background:#e8edf5;color:#0e1320}
 
-  /* hero "plate" disc */
-  .hero-art .disc{background:radial-gradient(circle at 50% 38%,#1b2336,#11182a);box-shadow:0 30px 70px -34px rgba(0,0,0,.7), inset 0 0 0 2px rgba(255,255,255,.06)}
-}
+/* hero "plate" disc */
+html[data-mode="dark"] .hero-art .disc{background:radial-gradient(circle at 50% 38%,#1b2336,#11182a);box-shadow:0 30px 70px -34px rgba(0,0,0,.7), inset 0 0 0 2px rgba(255,255,255,.06)}
