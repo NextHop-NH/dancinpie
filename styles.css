@@ -232,7 +232,7 @@ h1,h2,h3{margin:0;font-family:var(--font-display),'Fredoka',sans-serif;line-heig
 .locations .sec-kicker{color:var(--gold)}
 .locations .sec-head p{color:color-mix(in srgb,var(--cream) 80%,var(--navy))}
 .loc-watermark{position:absolute;right:-60px;bottom:-60px;width:420px;opacity:.06;pointer-events:none}
-.loc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,460px));gap:24px;justify-content:center;position:relative}
 .loc-card{background:color-mix(in srgb,var(--cream) 8%,var(--navy));border:2px solid color-mix(in srgb,var(--cream) 22%,var(--navy));
   border-radius:var(--radius);padding:30px 30px 26px}
 .loc-card h3{font-size:1.6rem;color:var(--cream);margin-bottom:6px}

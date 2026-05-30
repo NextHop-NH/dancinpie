@@ -39,11 +39,12 @@
       "menu.nopies": "No pies in that style yet — check back soon!",
       "loc.kicker": "Come dance with us", "loc.h2": "Find your pie",
       "loc.p": "Dine in, carry out, or order ahead. Slices fly — we recommend calling first on game nights.",
+      "loc.name": "Skopje", "loc.addr": "Mariovska, Skopje 1000",
       "loc.d1": "Mon – Thu", "loc.d2": "Fri – Sat", "loc.d3": "Sunday", "loc.open": "Open till 9p", "loc.order": "Order Pickup",
       "foot.blurb": "Detroit & Tavern style pizza, made with 48-hour dough and cheese all the way to the corner.",
       "foot.visit": "Visit", "foot.hungry": "Hungry?", "foot.catering": "Catering & Parties", "foot.gift": "Gift Cards",
       "foot.l_order": "Order Pickup", "foot.l_menu": "See the Menu", "foot.l_styles": "Our Styles", "foot.l_top": "Back to Top",
-      "foot.rights": "© 2026 Dancin' Pie. All rights reserved.", "foot.made": "Made fresh in Detroit, Michigan.",
+      "foot.rights": "© 2026 Dancin' Pie. All rights reserved.", "foot.made": "Made fresh in Skopje, North Macedonia.",
     },
     mk: {
       "meta.title": "Dancin' Pie — Пица во детроит и таверна стил",
@@ -79,11 +80,12 @@
       "menu.nopies": "Сè уште нема пици во тој стил — навратете наскоро!",
       "loc.kicker": "Дојди да заиграш со нас", "loc.h2": "Најди ја твојата пица",
       "loc.p": "Јади кај нас, земи за дома или нарачај однапред. Парчињата летаат — препорачуваме да се јавите однапред на денови со натпревари.",
+      "loc.name": "Скопје", "loc.addr": "Мариовска, Скопје 1000",
       "loc.d1": "Пон – Чет", "loc.d2": "Пет – Саб", "loc.d3": "Недела", "loc.open": "Отворено до 21ч", "loc.order": "Нарачај за носење",
       "foot.blurb": "Пица во детроит и таверна стил, со тесто од 48 часа и сирење дури до ќошот.",
       "foot.visit": "Посети", "foot.hungry": "Гладен?", "foot.catering": "Кетеринг и забави", "foot.gift": "Поклон картички",
       "foot.l_order": "Нарачај за носење", "foot.l_menu": "Види го менито", "foot.l_styles": "Нашите стилови", "foot.l_top": "Кон врвот",
-      "foot.rights": "© 2026 Dancin' Pie. Сите права задржани.", "foot.made": "Свежо подготвено во Детроит, Мичиген.",
+      "foot.rights": "© 2026 Dancin' Pie. Сите права задржани.", "foot.made": "Свежо подготвено во Скопје, Северна Македонија.",
     },
   };
 
