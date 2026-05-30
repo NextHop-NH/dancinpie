@@ -24,9 +24,10 @@
       "sc2.p": "Rolled cracker-thin, loaded edge to edge, then party-cut into little squares — the Midwest tavern way. Snappy, shareable, impossible to stop eating.",
       "sc2.m1": "Cracker-thin", "sc2.m2": "Edge-to-edge", "sc2.m3": "Party cut",
       "menu.kicker": "The Menu", "menu.h2": "Pick your pie",
-      "menu.p": 'Order <b>Solo</b> for a personal four-corner, or go <b>Sharable</b> for the full eight-corner pan. Toggle prices below.',
+      "menu.p": 'From a <b>Personal</b> (1 person) to a <b>Square</b> (1–2) to a full <b>Party</b> pan (6–8). Toggle prices below.',
       "tab.all": "All Pies", "tab.detroit": "Detroit Square", "tab.tavern": "Tavern Thin", "tab.veg": "Plant-Based",
-      "size.solo": "Solo", "size.share": "Sharable",
+      "size.personal": "Personal", "size.square": "Square", "size.party": "Party",
+      "size.personal_s": "1 person", "size.square_s": "1–2 people", "size.party_s": "6–8 people",
       "pz1.badge": "Fan Fave", "pz1.desc": "Wisconsin brick cheese carried all the way to the crispy edge, a double stack of pepperoni, and three bold stripes of San Marzano sauce over the top.", "pz1.ing": "Brick cheese · double pepperoni · red-top sauce",
       "pz2.desc": "Just cheese, done right. Brick and low-moisture mozz baked into a lacquered frico wall, finished with a garlic-butter rim.", "pz2.ing": "Brick + mozzarella · frico edge · garlic butter",
       "pz3.badge": "Spicy", "pz3.desc": "Cup-and-char pepperoni that crisps into little grease cups, a lazy drizzle of hot honey, and a flick of calabrian chili. A little swagger.", "pz3.ing": "Cup pepperoni · hot honey · calabrian chili",
@@ -65,9 +66,10 @@
       "sc2.p": "Развлечена тенко како крекер, натоварена од раб до раб, па исечена на мали квадрати — на начинот на средно-западните таверни. Крцкава, за делење, не можеш да застанеш.",
       "sc2.m1": "Тенка како крекер", "sc2.m2": "Од раб до раб", "sc2.m3": "Сечена на квадрати",
       "menu.kicker": "Менито", "menu.h2": "Избери ја твојата пица",
-      "menu.p": 'Земи <b>Соло</b> за личен четириаголник, или <b>За делење</b> за цел осумаголен сад. Менувај ги цените подолу.',
+      "menu.p": 'Од <b>Лична</b> (1 лице), преку <b>Квадрат</b> (1–2), до цела <b>Парти</b> тава (6–8). Менувај ги цените подолу.',
       "tab.all": "Сите пици", "tab.detroit": "Детроит квадрат", "tab.tavern": "Тенка таверна", "tab.veg": "Постни",
-      "size.solo": "Соло", "size.share": "За делење",
+      "size.personal": "Лична", "size.square": "Квадрат", "size.party": "Парти",
+      "size.personal_s": "1 лице", "size.square_s": "1–2 лица", "size.party_s": "6–8 лица",
       "pz1.badge": "Хит", "pz1.desc": "Висконсин брик сирење сè до крцкавиот раб, двоен слој пеперони и три смели ленти сос Сан Марцано преку врвот.", "pz1.ing": "Брик сирење · двојна пеперони · сос одозгора",
       "pz2.desc": "Само сирење, како што треба. Брик и моцарела печени во сјајна фрико кора, завршена со раб од лук и путер.", "pz2.ing": "Брик + моцарела · фрико раб · лук путер",
       "pz3.badge": "Луто", "pz3.desc": "Пеперони што се крцка во мали чашички, лежерно полеана со лут мед и малку калабриски чили. Со малку став.", "pz3.ing": "Чашеста пеперони · лут мед · калабриски чили",
@@ -90,7 +92,7 @@
   };
 
   var lang = "en";
-  var currentSize = "share"; // matches the default-active toggle button
+  var currentSize = "party"; // matches the default-active toggle button
   var t = function (key) { return (I18N[lang] && I18N[lang][key] != null) ? I18N[lang][key] : (I18N.en[key] != null ? I18N.en[key] : key); };
 
   // Prices are stored in USD (data-solo / data-share). On the MK site we show
@@ -119,7 +121,7 @@
       var amt = c.querySelector('.amt'), lbl = c.querySelector('.lbl');
       if (!amt || !lbl) return;
       amt.textContent = formatPrice(Number(c.dataset[size]));
-      lbl.textContent = size === 'solo' ? t('size.solo') : t('size.share');
+      lbl.textContent = t('size.' + size + '_s');
     });
   }
 
